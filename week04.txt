@@ -1,0 +1,8 @@
+리눅스 명령어
+
+
+깃 명령어
+
+git commit --amend -m "수정 할 커밋 메세지"
+git log --oneline
+git reset --hard HEAD~최근 커밋부터 삭제 할 커밋 개수
