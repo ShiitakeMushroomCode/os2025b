@@ -6,20 +6,14 @@ import (
 )
 
 func main(){
-	// var name string
-	// var id int
-	// name = "Kim"
-	// id = 1000
+	
+	var float_d float64
+	var int_d int
+	var bool_d bool
+	var str_d string
 
-	// var name string = "Kim"
-	// var id int = 1000
-
-	// var name = "Kim"
-	// var id = 1000
-
-	name := "Kim"
-	id := 1000
-
-	fmt.Println(name,reflect.TypeOf(name))
-	fmt.Println(id, reflect.TypeOf(id))
+	fmt.Println(float_d, reflect.TypeOf(float_d))
+	fmt.Println(int_d, reflect.TypeOf(int_d))
+	fmt.Println(bool_d, reflect.TypeOf(bool_d))
+	fmt.Println(str_d, reflect.TypeOf(str_d))
 }
