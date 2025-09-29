@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-	"math"
-	"strings"
+	"reflect"
 )
 
 func main(){
-	fmt.Println(math.Ceil(2.91))
-	fmt.Println(strings.ToTitle("go Go~"))
-	fmt.Println("Kim\nInha\t\"\\")
-	fmt.Println('A', '가')
+	fmt.Println(reflect.TypeOf(3.14))
+	fmt.Println(reflect.TypeOf("12"))
+	fmt.Println(reflect.TypeOf('1'))
+	fmt.Println(reflect.TypeOf(true))
+	fmt.Println(reflect.TypeOf(1))
 }
