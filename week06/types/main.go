@@ -6,9 +6,20 @@ import (
 )
 
 func main(){
-	fmt.Println(reflect.TypeOf(3.14))
-	fmt.Println(reflect.TypeOf("12"))
-	fmt.Println(reflect.TypeOf('1'))
-	fmt.Println(reflect.TypeOf(true))
-	fmt.Println(reflect.TypeOf(1))
+	// var name string
+	// var id int
+	// name = "Kim"
+	// id = 1000
+
+	// var name string = "Kim"
+	// var id int = 1000
+
+	// var name = "Kim"
+	// var id = 1000
+
+	name := "Kim"
+	id := 1000
+
+	fmt.Println(name,reflect.TypeOf(name))
+	fmt.Println(id, reflect.TypeOf(id))
 }
