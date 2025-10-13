@@ -12,6 +12,7 @@ import (
 
 func main(){
 	for i := 0; i < 10; i++{
+		fmt.Print("정답을 입력하세요(1~100 사이의 정수) : ")
 		reader := bufio.NewReader(os.Stdin)
 		input, err := reader.ReadString('\n')
 		if err != nil{
@@ -22,7 +23,6 @@ func main(){
 			log.Fatal(err) 
 		}
 		dice := rand.Intn(100) + 1
-		fmt.Print("정답을 입력하세요(1~100 사이의 정수) : ")
 		if result == dice{
 			fmt.Println("정답입니다.")
 			break
