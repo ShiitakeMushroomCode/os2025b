@@ -1,23 +1,16 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
-	"strings"
-	"time"
+	"log"
+	"os"
 )
 
 func main(){
-	var now time.Time = time.Now()
-	var year int = now.Year()
-	// month := now.Month()
-	var month time.Month = now.Month()
-	var day int = now.Day()
-	fmt.Println(year)
-	fmt.Println(month)
-	fmt.Println(day)
-
-	univ := "Go$ Inha$"
-	changer := strings.NewReplacer("$", "!")
-	fixed := changer.Replace(univ)
-	fmt.Println(fixed)
+	fmt.Print("Enter a grade: ")
+	reader := bufio.NewReader(os.Stdin)
+	input, err := reader.ReadString('\n')
+	fmt.Println(input)
+	log.Fatal(err) //report the error, exit the program
 }
