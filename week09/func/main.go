@@ -4,8 +4,16 @@ import (
 	"fmt"
 )
 func main(){
-	PrintPaintCalc(5.1,6.5)
+	amount := 0.0 
+	temp := 0.0
+	temp = PaintCalc(5.1,6.5)
+	amount += temp
+	fmt.Printf("%0.2f liters needed\n", temp)
+	temp = PaintCalc(6.1,2.5)
+	amount += temp
+	fmt.Printf("%0.2f liters needed\n", temp)
+	fmt.Printf("Total %0.2f liters needed\n", amount)
 }
-func PrintPaintCalc(w float64, h float64){
-	fmt.Printf("%0.2f liters needed\n", (w * h / 10))
+func PaintCalc(w float64, h float64) float64{
+	return (w * h / 10)
 }
