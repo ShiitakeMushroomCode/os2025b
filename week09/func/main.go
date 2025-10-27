@@ -4,21 +4,25 @@ import (
 	"fmt"
 )
 func main(){
-	liters, err := PaintCalc(-5.0, 10.0)
-  if err != nil {
-    fmt.Println("Error:", err) 
-    return
-  }
-  fmt.Printf("%0.2f liters needed\n", liters)
+	f:=123
+	s:=456
+  Swap(f,s)
+	fmt.Println("Main Value\nfirst :",f,"second :",s,"\n ")
+  Pswap(&f,&s)
+	fmt.Println("Main Value\nfirst :",f,"second :",s)
 }
-func PaintCalc(w float64, h float64) (float64, error) { 
-  if w <= 0 {
-    return 0, fmt.Errorf("가로 값이 0이하 입니다. %.2f", w) 
-  }
-  if h <= 0 {
-    return 0, fmt.Errorf("세로 값이 0이하 입니다. %.2f", h) 
-  }
-  
-  liters := w * h / 10
-  return liters, nil 
+
+func Swap(f int, s int){
+	temp:=f
+	f=s
+	s=temp
+	fmt.Println("Value Swap\nfirst :",f,"second :",s)
 }
+
+func Pswap(f *int, s *int){
+	temp:=*f
+	*f=*s
+	*s=temp
+	fmt.Println("Pointer Swap\nfirst :",*f,"second :",*s)
+}
+
