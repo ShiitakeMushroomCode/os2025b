@@ -10,21 +10,12 @@ import (
 )
 
 func main(){
-	fmt.Print("점수값을 입력하세요(0~100점 사이의 실수) : ")
-	score, err := GetFloat()
+	fmt.Print("섭씨온도를 입력하세요 : ")
+	celsius, err := GetFloat()
 	if err!=nil{
 		log.Fatal(err)
-	} 
-	if score < 0 || score > 100{
-		log.Fatal("잘못된 값이 입력되었습니다. 입력값 :", score)
 	}
-	status := ""
-	if score >= 90{
-		status="합격"
-	}else{
-		status="불합격"
-	}
-	fmt.Printf("%.2f점 %s입니다.", score, status)
+	fmt.Printf("섭씨%.2f도는 화씨%.2f도입니다.", celsius, (celsius * 9/5) + 32)
 }
 
 func GetFloat() (float64, error) {
