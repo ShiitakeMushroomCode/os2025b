@@ -1,8 +1,8 @@
 package main
 
-import "greeting"
+import "week10/pkg/greeting"
 
-func main(){
+func main() {
 	greeting.Hello()
 	greeting.Hi()
 }
