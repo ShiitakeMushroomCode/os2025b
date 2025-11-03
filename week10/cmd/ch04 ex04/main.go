@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/headfirstgo/keyboard"
+	"github.com/headfirstgo/keyboard" //go get github.com/headfirstgo/keyboard
 )
 
 func main() {
