@@ -3,13 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	// var subj []string
-	// subj = make([]string, 3)
-	// subj := make([]string, 3)
-	// subj[0] = "Go"
-	// subj[2] = "Python"
-	subj := []string{"Go","","Python"}
+	subj := []string{"Go", "Javascript", "Python", "Linux"}
+	subjS := subj[1:3]
 	for _, sub := range subj{
 		fmt.Println(sub)
+	}
+	fmt.Println("==================")
+	for i:=0; i<len(subjS);i++{
+		fmt.Println(subjS[i])	
 	}
 }
