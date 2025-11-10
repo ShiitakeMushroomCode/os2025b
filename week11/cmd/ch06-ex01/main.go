@@ -3,8 +3,10 @@ package main
 import "fmt"
 
 func main() {
-	subj := []string{"Go", "Javascript", "Python", "Linux"}
-	subjS := subj[1:3]
+	subj := [4]string{"Go", "Javascript", "Python", "Linux"}
+	subjS := subj[:3]
+	subj[0] = "Java"
+	subjS = append(subjS, "Go")
 	for _, sub := range subj{
 		fmt.Println(sub)
 	}
