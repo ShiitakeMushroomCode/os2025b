@@ -3,23 +3,28 @@ package main
 import (
 	"fmt"
 	"log"
-	"week13/pkg/calendar"
+
+	"github.com/headfirstgo/calendar"
 )
 
 func main() {
-	date := calendar.Date{}
-	err := date.SetYear(2025)
+	event := calendar.Event{}
+	err := event.SetTitle("My Birthday!")
 	if err != nil{
 		log.Fatal(err)
 	}
-	err = date.SetMonth(11)
+	err = event.SetYear(2025)
+	if err != nil{
+		log.Fatal(err)
+	}
+	err = event.SetMonth(11)
 	// err = date.SetMonth(19)
 	if err != nil{
 		log.Fatal(err)
 	}
-	err = date.SetDay(24)
+	err = event.SetDay(24)
 	if err != nil{
 		log.Fatal(err)
 	}
-	fmt.Println(date.PrintDate())
+	fmt.Printf("%d년 %d월 %d일은 %s",event.Year(),event.Month(),event.Day(),event.Title())
 }
