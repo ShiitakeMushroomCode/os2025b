@@ -6,29 +6,21 @@ import (
 )
 
 func say(msg string) {
-	for i := range 3 {
+	for i := 0; i < 3; i++ {
 		fmt.Println(msg, ":", i)
 		time.Sleep(2000 * time.Millisecond)
 	}
 }
 
-func say2(msg string) {
-	for i := range 3 {
-		fmt.Println(msg, ":", i)
-		time.Sleep(1500 * time.Millisecond)
-	}
+func hi(msg string) {
+	time.Sleep(3000 * time.Millisecond)
+	fmt.Println(msg)
 }
 
 func main() {
 	start := time.Now()
-
-	// 4.5초 걸림
-	// go say("고루틴") // 새 고루틴에서 실행
-	// say2("메인")     // 메인 고루틴에서 실행
-
-	// 6초 걸림
-	go say2("고루틴") // 새 고루틴에서 실행
-	say("메인")     // 메인 고루틴에서 실행
-
+	go hi("고루틴2")                // 새 고루틴에서 실행
+	go say("고루틴1")               // 새 고루틴에서 실행
+	time.Sleep(10 * time.Second) // 메인 고루틴 대기
 	fmt.Println("전체 실행 시간 : ", time.Since(start))
 }
